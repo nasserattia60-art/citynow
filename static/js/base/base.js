@@ -1,3 +1,7 @@
+console.log('Base JS loaded');
+
+
+
 const toggle = document.querySelector('.menu-toggle');
 const navbar = document.querySelector('.navbar');
 

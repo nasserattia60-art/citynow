@@ -1,71 +1,43 @@
-// Select all sections
-const sections = document.querySelectorAll('div > ul > li');
+console.log('About JS loaded');
 
-// Function to close all sections
+const sections = document.querySelectorAll('#al_ab > ul > li');
+
 function closeAllSections() {
   sections.forEach(sec => {
-    const paragraph = sec.querySelector('p');
-    const list = sec.querySelector('ul');
-    const btn = sec.querySelector('h2 button');
-    if (paragraph) paragraph.style.display = 'none';
-    if (list) list.style.display = 'none';
-    if (btn) btn.textContent = "Show More";
+    sec.dataset.open = 'false';
+    sec.querySelector('p')?.style.display = 'none';
+    sec.querySelector('ul')?.style.display = 'none';
+    sec.querySelector('h2 button').textContent = 'Show More';
   });
+}
+
+function openSection(section) {
+  section.dataset.open = 'true';
+  section.querySelector('p')?.style.display = 'block';
+  section.querySelector('ul')?.style.display = 'block';
+  section.querySelector('h2 button').textContent = 'Show Less';
 }
 
 sections.forEach(section => {
   const heading = section.querySelector('h2');
+  const btn = heading.querySelector('button');
 
-  // Create toggle button if not exists
-  let btn = heading.querySelector('button');
-  if (!btn) {
-    btn = document.createElement('button');
-    btn.textContent = "Show More";
-    heading.appendChild(btn);
-  }
+  section.dataset.open = 'false';
 
-  // Toggle function
   function toggleSection() {
-    const paragraph = section.querySelector('p');
-    const list = section.querySelector('ul');
-    const isOpen = paragraph.style.display === 'block';
-
-    // Close all other sections first
+    const isOpen = section.dataset.open === 'true';
     closeAllSections();
-
-    if (!isOpen) {
-      // Open current section
-      if (paragraph) paragraph.style.display = 'block';
-      if (list) list.style.display = 'block';
-      btn.textContent = "Show Less";
-    }
+    if (!isOpen) openSection(section);
   }
 
-  // Add event to heading click
-  heading.addEventListener('click', toggleSection);
-
-  // Add event to li click (if clicking outside heading)
-  section.addEventListener('click', (e) => {
-    // Prevent double toggle if heading is clicked
-    if (e.target !== heading && e.target !== btn) {
-      toggleSection();
-    }
+  heading.addEventListener('click', (e) => {
+    // prevent double toggle if button clicked
+    if (e.target === btn) return;
+    toggleSection();
   });
 
-  // Add event to button click
   btn.addEventListener('click', (e) => {
-    e.stopPropagation(); // prevent li click from firing
-    const paragraph = section.querySelector('p');
-    const list = section.querySelector('ul');
-    const isOpen = paragraph.style.display === 'block';
-
-    if (isOpen) {
-      // Close current section
-      if (paragraph) paragraph.style.display = 'none';
-      if (list) list.style.display = 'none';
-      btn.textContent = "Show More";
-    } else {
-      toggleSection();
-    }
+    e.stopPropagation();
+    toggleSection();
   });
 });

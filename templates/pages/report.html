@@ -1,20 +1,21 @@
 {% extends 'base/base.html' %}
-{% load static  %}
-{% block title %}Home - CityNow {% endblock %}
- {% block meta %}
- 
- 
- {% endblock %}
-    {% block style %}
-    <link rel="stylesheet" href="{% static 'css/pages/report.css' %}">
-    {% endblock %}
-{% block content %}
-  <div id="report_page">
-    <h1>City Report</h1>
-    <p>This is a comprehensive report about the city, detailing its advantages, disadvantages, and common challenges faced by residents and visitors alike.</p>
-    <!-- Additional report content goes here -->
-  </div>
-{% endblock %}
-{% block scripts %}
+{% load static %}
 
+{% block title %}Home - CityNow{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'vendor/leaflet/leaflet.css' %}">
+<link rel="stylesheet" href="{% static 'css/base/leaflet.css' %}">
+<link rel="stylesheet" href="{% static 'css/pages/report.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="map-wrapper">
+    <div id="map"></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'vendor/leaflet/leaflet.js' %}"></script>
+<script src="{% static 'js/base/leaflet.js' %}"></script>
 {% endblock %}

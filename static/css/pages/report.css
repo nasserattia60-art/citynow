@@ -1,0 +1,12 @@
+.map-wrapper {
+    padding: 24px;
+}
+
+#map {
+    height: 70vh;
+    min-height: 420px;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+}
