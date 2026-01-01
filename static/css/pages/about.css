@@ -11,23 +11,6 @@
 }
 
 /* ===== Global Reset ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: var(--font-family);
-  line-height: 1.6;
-  color: var(--text-color);
-}
-ul{
-  
-  list-style: none;
-}
-/* ===== Body ===== */
-body {
-  background: var(--bg-color);
-
-}
 
 /* ===== Container ===== */
 #al_ab {
