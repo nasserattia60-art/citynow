@@ -1,0 +1,48 @@
+{% extends 'base/base.html' %}
+
+
+{% load static %}
+
+
+{% block title %} Home - CityNow {% endblock %}
+
+<meta name="description" content="Discover real insights about cities with CityNow. Explore advantages, disadvantages, and common challenges to make informed decisions about where to live or visit.">
+ {% block meta %}
+
+ {% endblock %}
+
+
+ <link rel="stylesheet" href="{% static 'css/pages/home.css' %}">
+
+    {% block style %}
+    {% endblock %}
+
+{% block content %}
+
+  <div id="home_intro">
+    <h1>Welcome to CityNow</h1>
+    <p>Your trusted platform for real insights about cities. Explore the advantages, disadvantages, and common challenges of cities worldwide to make informed decisions about where to live or visit.</p>
+    <a href="{% url 'analyzer:about' %}" class="btn-learn-more">Learn More About Us</a>
+  </div>
+  
+  <div id="home_features">
+    <h2>Explore Our Features</h2>
+    <ul>
+      <li>
+        <h3>City Comparisons</h3>
+        <p>Easily compare multiple cities side by side based on key factors like cost of living, safety, transportation, and public services.</p>
+      </li>
+      <li>
+        <h3>Real User Reviews</h3>
+        <p>Read authentic reviews from residents and visitors to get a true sense of what life is like in each city.</p>
+      </li>
+      <li>
+        <h3>Comprehensive Data</h3>
+        <p>Access up-to-date statistics and information to help you understand the realities of different urban environments.</p>
+      </li>
+    </ul>
+  </div>
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

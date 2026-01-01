@@ -1,0 +1,18 @@
+<nav class="nav">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="{% url 'analyzer:home' %}">City<span>Now</span></a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            ☰
+        </button>
+
+        <ul class="navbar">
+            <li><a href="{% url 'analyzer:home' %}">Home</a></li>
+            <li><a href="{% url 'analyzer:about' %}">About</a></li>
+            <li><a href="{% url 'analyzer:report' %}">Report</a></li> 
+            <li><a href="{% url 'core:comunty' %}">Community</a></li> 
+        </ul>
+    </div>
+</nav>

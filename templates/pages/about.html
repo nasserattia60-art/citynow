@@ -1,0 +1,99 @@
+{% extends 'base/base.html' %}
+{% load static  %}
+{% block title %}About Citynow {% endblock %}
+ {% block meta %}
+ 
+ 
+ {% endblock %}
+
+
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'css/pages/about.css' %}">
+    
+    
+    {% endblock %}
+{% block content %}
+  <div id="al_ab">
+    <ul>
+      <li>
+        <h2>🌟 Inspiration</h2>
+        <p>Many people consider moving to or visiting a new city based on attractive images or incomplete information, only to face unexpected realities later. <strong>CityNow</strong> was created to help understand the <strong>real day-to-day conditions of cities</strong> by clearly presenting their advantages, disadvantages, and common challenges before making important decisions.</p>
+      </li>
+      
+      <li>
+        <h2>⚙️ What it does</h2>
+        <p><strong>CityNow</strong> is a platform that helps users:</p>
+        <ul>
+          <li>Explore cities before relocating or visiting</li>
+          <li>Understand real-life advantages, disadvantages, and recurring problems</li>
+          <li>Access practical information such as cost of living, transportation, safety, and public services</li>
+          <li>Build a realistic mental picture of a city to support informed decision-making</li>
+          <li>Reduce risks caused by decisions based on assumptions or outdated information</li>
+        </ul>
+      </li>
+      
+      <li>
+        <h2>🛠️ How we built it</h2>
+        <p>CityNow was built using:</p>
+        <ul>
+          <li><strong>Backend:</strong> Django to manage data and business logic</li>
+          <li><strong>Frontend:</strong> HTML, CSS, and JavaScript to deliver a clean and intuitive interface</li>
+          <li><strong>UX Design:</strong> Focused on clarity, readability, and ease of comparison</li>
+          <li><strong>Architecture:</strong> Clear separation between presentation, logic, and data layers</li>
+          <li><strong>Scalability:</strong> A flexible structure that supports future expansion and integrations</li>
+        </ul>
+      </li>
+      
+      <li>
+        <h2>🚧 Challenges we ran into</h2>
+        <p>Some of the key challenges included:</p>
+        <ul>
+          <li>Presenting city problems and disadvantages in a fair, objective, and non-biased way</li>
+          <li>Organizing large volumes of information without overwhelming users</li>
+          <li>Designing an experience suitable for users with different backgrounds and needs</li>
+          <li>Ensuring fast access to critical information</li>
+          <li>Building a system that remains adaptable as complexity grows</li>
+        </ul>
+      </li>
+      
+      <li>
+        <h2>🏆 Accomplishments that we're proud of</h2>
+        <p>We are proud of:</p>
+        <ul>
+          <li>Creating a platform that addresses a real and practical need</li>
+          <li>Delivering a balanced and realistic view of cities</li>
+          <li>Designing a UX that supports meaningful, real-life decisions</li>
+          <li>Building a well-structured and scalable technical foundation</li>
+          <li>Transforming an idea into a functional and usable product</li>
+        </ul>
+      </li>
+      
+      <li>
+        <h2>📚 What we learned</h2>
+        <p>Throughout this project, we learned:</p>
+        <ul>
+          <li>The importance of transparency in information-based platforms</li>
+          <li>How UX design directly impacts critical life decisions</li>
+          <li>The value of architectural planning before implementation</li>
+          <li>How to simplify complex data without losing meaning</li>
+          <li>How to design products from a user’s perspective, not just a technical one</li>
+        </ul>
+      </li>
+      
+      <li>
+        <h2>🚀 What’s next for CityNow</h2>
+        <p>The next phase of CityNow focuses on <strong>real-time, trustworthy, and community-driven intelligence</strong>, including:</p>
+        <ul>
+          <li>Integrating verified data from <strong>reliable governmental and private-sector sources</strong> to provide live, <strong>real-time updates</strong>.</li> 
+          <li>Introducing <strong>city-based communities</strong> where residents and visitors can report local issues, such as closed bridges, heavy snow in specific areas, or flooded roads.</li>
+          <li>Enabling users to <strong>avoid risks and disruptions</strong> by accessing timely, location-specific alerts.</li>
+          <li>Improving data validation mechanisms to ensure accuracy, reliability, and usefulness.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  
+{% endblock %}
+    {% block script %}
+    <script src="{% static 'js/pages/about.js' %}"></script>
+    {% endblock %}
